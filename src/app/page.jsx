@@ -20,7 +20,7 @@ function parsePageParams(paramValue) {
 
 export default async function ReviewsPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
-  const reviews = await getReviews();
+  const reviews = await getPagedReviews();
   const pageCount = await getPageCount();
   return (
     <>
