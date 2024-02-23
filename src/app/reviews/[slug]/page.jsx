@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { slug } }) {
   const review = await getReview(slug);
-  console.log(review);
+  //console.log(review);
   return {
     title: review.attributes.Title,
   };

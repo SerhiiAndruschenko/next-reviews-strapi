@@ -32,7 +32,6 @@ export default async function ReviewsPage({ searchParams }) {
         {reviews.map((review) => (
           
           <li key={review.attributes.slug}>
-            {console.log(review.attributes.Image)}
             <AnimatedElement> 
               <Link
                 className="flex flex-col items-center sm:flex-row post-card border rounded bg-slate-200 hover:shadow-lg"
