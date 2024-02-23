@@ -16,7 +16,7 @@ export default async function Authors() {
                 <div className="authors-row">
                     {authors.map((author) => (
                         <AnimatedElement>
-                            
+                            {console.log(author)}  
                             <Link className="flex flex-col items-center border rounded bg-slate-200 hover:shadow-lg" href={`/authors/${author.attributes.slug}`} key={author.attributes.slug}>
                                 <img src={`${CMS_URL}${author.attributes.Image.data.attributes.url}`}></img>
                                 <span>{author.attributes.Title}</span>

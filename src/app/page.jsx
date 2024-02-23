@@ -5,7 +5,7 @@ import AnimatedElement from "@/src/components/AnimatedElement";
 import Image from "next/image";
 import HomeBanner from "../components/HomeBanner";
 import { CMS_URL } from "@/lib/reviews";
-
+ 
 // export const dynamic = 'force-dynamic';
 
 function parsePageParams(paramValue) {
@@ -20,7 +20,7 @@ function parsePageParams(paramValue) {
 
 export default async function ReviewsPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
-  const reviews = await getPagedReviews();
+  const reviews = await getPagedReviews(page);
   const pageCount = await getPageCount();
   return (
     <>
