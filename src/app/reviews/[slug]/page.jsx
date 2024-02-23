@@ -16,14 +16,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { slug } }) {
   const review = await getReview(slug);
-  //console.log(review);
   return {
     title: review.attributes.Title,
-  };
+  }; 
 }
 
 export default async function ReviewPage({ params: { slug } }) {
   const review = await getReview(slug);
+  
   const content = marked(review.attributes.content);
   return (
     <>
