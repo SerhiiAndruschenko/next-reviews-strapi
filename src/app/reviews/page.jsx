@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Heading from "@/src/components/Heading";
 import { getPagedReviews, getPageCount, getReviews } from "@/lib/reviews";
 import AnimatedElement from "@/src/components/AnimatedElement";
 import Image from "next/image";
-import HomeBanner from "../components/HomeBanner";
 import { CMS_URL } from "@/lib/reviews";
 
 // export const dynamic = 'force-dynamic';
@@ -24,9 +22,6 @@ export default async function ReviewsPage({ searchParams }) {
   const pageCount = await getPageCount();
   return (
     <>
-      {page == 1 && (
-          <HomeBanner />
-        )}
 
       <ul className="flex flex-col gap-4">
         {reviews.map((review) => (
